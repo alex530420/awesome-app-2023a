@@ -1,0 +1,17 @@
+{
+  "name": "awesome-app-2023a",
+  "version": "0.0.0",
+  "description": "App for learning Express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "ITGAM",
+    "DWPCI",
+    "JavaScript"
+  ],
+  "author": "Alejandro Carreon Herrera",
+  "license": "MIT "
+}
