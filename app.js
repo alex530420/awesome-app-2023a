@@ -1,8 +1,33 @@
-
-//importando express js
+// Importando Express
 import express from 'express';
 
-const app = express(); //(req, resp)=>(un monton de codigo)
+// Importando el enrutador
+import adminRouter from './routes/admin.route.js';
+import shopRouter from './routes/shop.route.js';
+
+// Creando la instancia de express
+// que basicamente es un middleware
+const app = express();
+
+// Se registra el middleware del body-parser
+app.use(express.urlencoded({ extended: true }));
+
+// Se agrega ruta de administrador
+app.use(adminRouter);
+// Se agrega ruta shop
+app.use(shopRouter);
+
+
+// Definiendo puertos
+const port = 3000;
+const ip = "0.0.0.0"
+
+// Arrancando el servidor
+app.listen(port, ip, () => {
+  console.log(`🤖 Sirviendo en http://localhost:${port}`);
+});
+
+
 
 //middlewear de parseo de datos del cliente
 app.use(express.urlencoded({extended: true}));
@@ -15,7 +40,7 @@ app.use('/about',(req,res)=>{
     desarrollo web en Fullstack con JS</p>
    `);
 });
-
+/*
 app.use('/add-product',(req,res,next)=>{
     if(req.method === "POST") return next();
     //sirviendo el formulario
@@ -39,9 +64,7 @@ app.use('/add-product',(req,res)=>{
     console.log(`PROP:  ${prop} ${req.body[prop]}`);
    }
    res.redirect("/");
-});
-
-
+});*/
 
 
 //registar el middlewear 
@@ -71,10 +94,6 @@ app.use((req , res) => {
 //creando servidor
 
 //const server = htpp.createServer(app);
-
-//definir puertos
-const port=3000;
-const ip = "0.0.0.0";
 
 // arrancar el servidor
 
