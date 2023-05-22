@@ -2,8 +2,8 @@
 import express from 'express';
 
 // Importando el enrutador
-import adminRouter from './routes/admin.route.js';
-import shopRouter from './routes/shop.route.js';
+import adminRouter from './routes/admin.routes.js';
+import shopRouter from './routes/shop.routes.js';
 
 // Creando la instancia de express
 // que basicamente es un middleware
@@ -97,7 +97,4 @@ app.use((req , res) => {
 
 // arrancar el servidor
 
-     app.listen(port, ip,(err)=>{
-    console.log("📢 Sirviendo en http://localhost:3000");
-    console.log(`📢 Sirviendo en http://${process.env.IP}:${process.env.PORT}`);
-})
+     
