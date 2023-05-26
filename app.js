@@ -1,21 +1,28 @@
+
 // Importando Express
 import express from 'express';
 //importando http-status
 import httpStatus from 'http-status';
 
+import path from 'path';
+
 // Importando el enrutador
 import adminRouter from './routes/admin.routes.js';
 import shopRouter from './routes/shop.routes.js';
-
+//importando ROOT_DIR
+import { ROOT_DIR } from './helpers/paths.js';
 // Creando la instancia de express
 // que basicamente es un middleware
 const app = express();
 
 // Se registra el middleware del body-parser
 app.use(express.urlencoded({ extended: true }));
+//se registra para archivos estaticos
+app.use(express.static(path.join(ROOT_DIR,'public')));
+
 
 // Se agrega ruta de administrador
-app.use(adminRouter);
+app.use('/admin',adminRouter);
 //admin router 
 app.use('/admin',adminRouter)
 // Se agrega ruta shop
