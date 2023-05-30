@@ -8,7 +8,8 @@ import path from 'path';
 const router = Router();
 
 // Importando productos
-import { products } from './admin.route.js';
+import { products } from './admin.routes.js';
+import httpStatus from 'http-status';
 
 
 // GET /
@@ -16,7 +17,7 @@ router.get('/', (req, res)=>{
   // Mostrando productos en memoria
   console.log(products);
   console.log("📢 Sirviendo la ruta '/'");
-  res.sendFile(path.resolve('views','shop.html'));
+  res.render('shop');
 });
 
 // GET /about
@@ -31,7 +32,7 @@ router.get('/about', (req, res) => {
 
 router.use((req, res)=>{
   console.log("📢error 404");
-  res.sendFile(path.resolve('views','notfound.html'));
+  res.status(httpStatus.NOT_FOUND).sendFile(path.resolve('views','notfound.hbs'));
 });
 
 export default router;
