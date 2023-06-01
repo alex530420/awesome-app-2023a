@@ -1,36 +1,36 @@
 .product-control{
-    width: 20rem;
-    max-width: 90%;
-    margin:auto;
-  }
-  .form-control{
-    margin: 1rem 0;
+  width: 20rem;
+  max-width: 90%;
+  margin:auto;
+}
+.form-control{
+  margin: 1rem 0;
 
-  }
-  .form-control input,
-  .form-control label{
-  display: block;
-  width: 100%;
-  }
-  .form-control label{
-    color: #222;
-  }
-  .form-control input{
-    border: 1px solid #6FB3BB;
-    font: inherit;
-    border-radius: 2px;
-    color: darkslategrey;
-  }
+}
+.form-control input,
+.form-control label{
+display: block;
+width: 100%;
+}
+.form-control label{
+  color: #222;
+}
+.form-control input{
+  border: 1px solid #6FB3BB;
+  font: inherit;
+  border-radius: 2px;
+  color: darkslategrey;
+}
 
-  button{
-    font: inherit;
-    border: 1px solid  #6FB3BB;
-    color: #C2EDCE;
-    background: #6FB3BB;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  button:hover,
-  button:active{
-    background-color: #388087;
-  }
+button{
+  font: inherit;
+  border: 1px solid  #6FB3BB;
+  color: #C2EDCE;
+  background: #6FB3BB;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:hover,
+button:active{
+  background-color: #388087;
+}
