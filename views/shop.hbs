@@ -1,2 +1,8 @@
 <h1>My Products</h1>
-<p>List of all products...</p>
+{{#unless isProductsListEmpty }}
+<p>Product List</p>
+<div class="grid">
+</div>
+{{else}}
+<h2 style="color: cornflowerblue;">No products in stock</h2>
+{{/unless}}
